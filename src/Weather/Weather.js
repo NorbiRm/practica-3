@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Grid from '@material-ui/core/Grid';
 import Dias from '../Dias/Dias.js'
+import './Weather.scss';
 import Typography from '@material-ui/core/Typography';
 
 class ForeCast extends Component {
@@ -10,8 +11,8 @@ class ForeCast extends Component {
   render() {
     return (
         <div>
-        <Grid container>
-              <Grid item xs={12} lg={6}>
+        <Grid container align="center">
+              <Grid item xs={12}>
                     <h2>{this.props.match.params.city}</h2>
               </Grid>
         </Grid>

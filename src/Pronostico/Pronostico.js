@@ -1,6 +1,7 @@
 import React from 'react';
 import ForeCast from '../ForeCast/ForeCast.js';
 import Grid from '@material-ui/core/Grid';
+import { Link } from 'react-router-dom';
 
 class Pronostico extends React.Component{
 
@@ -21,10 +22,11 @@ class Pronostico extends React.Component{
       }
 
       return(
-        <div className="table-responsive">
-            <Grid container align="stretch" direction="row">
+        <div>
+            <Grid container direction="row">
               {clima}
             </Grid>
+             <Link to="/">principal</Link>
         </div>
       )
     }
