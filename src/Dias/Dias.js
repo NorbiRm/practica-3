@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import {Grid} from '@material-ui/core';
-import ForeCast from '../ForeCast/ForeCast.js'
+import Pronostico from '../Pronostico/Pronostico.js'
 var TodoActions = require('../Actions/AppActions.js');
 var TodoStore = require('../Store/Store.js');
-var pronosticos = [];
 
 class Dias extends Component {
 
@@ -15,33 +14,22 @@ class Dias extends Component {
         return TodoStore.getList();
     }
 
-    componentDidMount() {
-        console.log(this.props.city);
-        TodoStore.addChangeListener(this._onChange);
-        TodoActions.getWheather(this.props.city);
-        var data = Array.from(this.state.list);
-        if(this.state.list) {
-          data.forEach(item => {
-            var forecast = Array.from(item.forecast.forecastday);
-            forecast.forEach((element, i) => {
-              pronosticos.push(<ForeCast key={i} element={element} />);
-            });
-          });
-        }
-    }
-
     _onChange = () => {
         this.setState({list: TodoStore.getList()});
     }
 
+    componentDidMount(){
+      console.log(this.props.city);
+      TodoStore.addChangeListener(this._onChange);
+      TodoActions.getWheather(this.props.city);
+
+    }
 
     render() {
-
+        {this.getInitialState()}
         return (
             <div>
-              <Grid container>
-                  {pronosticos}
-              </Grid>
+              <Pronostico list={this.state.list} />
             </div>
         );
     }

@@ -1,7 +1,7 @@
 // Todo actions
 var AppDispatcher = require('../AppDispatcher');
 var Constants = require('../AppConstants');
-var WheatherAPI = require('../Utils/WheatherAPI');
+var WheatherAPI = require('../WheatherAPI.js');
 
 module.exports = {
 

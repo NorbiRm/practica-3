@@ -1,5 +1,5 @@
 
-var ServerActions = require('../Actions/ServerActions');
+var ServerActions = require('./Actions/ServerActions');
 var request = require('superagent');
 
 module.exports = {
@@ -11,7 +11,7 @@ module.exports = {
       .end(function(err, response) {
         if (err) return console.error(err);
 
-        ServerActions.receiveWheather(response.body);
+        ServerActions.getWheather(response.body);
       });
   }
 };

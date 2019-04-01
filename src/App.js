@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 import './App.scss';
 import Main from './Main/Main.js';
-import ForeCast from './Weather/Weather.js';
+import Weather from './Weather/Weather.js';
 
 class App extends Component {
   render() {
@@ -10,8 +10,7 @@ class App extends Component {
       <div className="App">
       <BrowserRouter>
             <Route path='/' exact component={Main} />
-            <Route path='/Main' exact component={Main} />
-            <Route path='/:city' exact component={ForeCast} />
+            <Route path='/:city' exact component={Weather} />
 
       </BrowserRouter>
 
