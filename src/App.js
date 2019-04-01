@@ -11,7 +11,7 @@ class App extends Component {
       <BrowserRouter>
             <Route path='/' exact component={Main} />
             <Route path='/Main' exact component={Main} />
-            //<Route path='/:city' exact component={ForeCast}/>
+            <Route path='/:city' exact component={ForeCast} />
 
       </BrowserRouter>
 
