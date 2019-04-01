@@ -1,5 +1,5 @@
 
-var ServerActions = require('../actions/ServerActions');
+var ServerActions = require('../Actions/ServerActions');
 var request = require('superagent');
 
 module.exports = {

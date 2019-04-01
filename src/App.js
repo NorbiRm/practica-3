@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 import './App.scss';
 import Main from './Main/Main.js';
-import ForeCast from './ForeCast/ForeCast.js';
+import ForeCast from './Weather/Weather.js';
 
 class App extends Component {
   render() {
